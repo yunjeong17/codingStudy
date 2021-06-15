@@ -1,6 +1,8 @@
 # 영어 끝말잇기
 # https://programmers.co.kr/learn/courses/30/lessons/12981?language=python3
 
+#간결하게 풀기위해 노력해야함
+
 #내 풀이
 def solution(n, words):
     answer = []
@@ -31,7 +33,6 @@ def solution(n, words):
         if words[p][0] != words[p-1][-1] or words[p] in words[:p]: return [(p%n)+1, (p//n)+1]
     else:
         return [0,0]
-
 
 print(solution(5,["hello", "observe", "effect", "take", "either", "recognize", "encourage", "ensure", "establish", "hang", "gather", "refer", "reference", "estimate", "executive"]),'result:[0,0]')
 print(solution(3,["tank", "kick", "know", "wheel", "land", "dream", "mother", "robot", "tank"]),'result:[3,3]' )
