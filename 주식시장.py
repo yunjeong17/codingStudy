@@ -32,17 +32,17 @@ print(solution1([5, 8, 6, 2, 4, 1]),"return: [3, 1, 1, 2, 1, 0]")
 # 4 > 1              :: 1
 # 1                  :: 0
 
-#스택 큐 안쓰고
+#스택 큐 안쓰고 별로 다르지도 않은데... 왜....되는거지...
 def solution2(prices):
     answer = []
-    for j in range(len(prices)):
-        for i in range(j+1,len(prices)):
-            if prices[j] > prices[i]:
+    for i in range(len(prices)):
+        for j in range(i+1,len(prices)):
+            if prices[i] > prices[j]:
                 break
-        answer.append(i-j)
+        answer.append(j-i)
     return answer
 
 print(solution2([1, 2, 3, 2, 3]),"return: [4, 3, 1, 1, 0]")
 print(solution2([5, 8, 6, 2, 4, 1]),"return: [3, 1, 1, 2, 1, 0]")
 
-# 쓰고는 어케해야하지
+# 스택쓰고는 어케해야하지...

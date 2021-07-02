@@ -29,5 +29,7 @@ def solution2(d, budget):
     print("WorkingTime: {} sec".format(end-start))
     return len(d) #길이를 출력
 #근데 이게 더 오래걸리지 않나 매번 리스트에 있는 모든 수를 sum 해줘야하는데??
+#짧은건 이게 덜 걸림.
+
 print(solution2([1,3,2,5,4],9),"result: 3")
 print(solution2([2,2,3,3],10),"result: 4")
