@@ -52,9 +52,8 @@ def solution3(n, works):
         if i+1==n:
             for j in max_heap:
                 answer+=j**2
-
-    
     return answer
+    
 # print(solution1(4,[3, 3, 4]),"result: 12")
 # print(solution1(1,[2, 1, 2]),"result: 6")
 # print(solution1(3,[1,1]),"result: 0")
