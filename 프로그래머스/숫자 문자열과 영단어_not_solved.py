@@ -2,7 +2,7 @@
 # https://programmers.co.kr/learn/courses/30/lessons/81301
 import re
 
-# 같은 숫자가 안나온다면 이렇게 해도 되는데 같은 숫자가 영어로 되어있으면 어쩌지?
+# 같은 숫자가 안나온다면 이렇게 해도 되는데 같은 숫자가 영어로 되어있을 가능성이 있음
 def solution1(s):
     answer = 0
     num={"zero":0,"one":1,"two":2,"three":3,"four":4,"five":5,"six":6,"seven":7,"eight":8,"nine":9}
@@ -12,12 +12,13 @@ def solution1(s):
             s=s[:findI]+str(num[i])+s[findI+len(i):]
     return s
 
-# 같은게 두개이상
+# 그냥 다.. replace 해버리자...
 def solution2(s):
     answer = 0
-    num={"zero":0,"one":1,"two":2,"three":3,"four":4,"five":5,"six":6,"seven":7,"eight":8,"nine":9}
-    
-    return s
+    num={"zero":"0","one":"1","two":"2","three":"3","four":"4","five":"5","six":"6","seven":"7","eight":"8","nine":"9"}
+    for a,b in num.items():
+        s=s.replace(a,b)
+    return int(s)
 
 
 print(solution2("one4seveneight"),"result:1478")

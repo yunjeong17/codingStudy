@@ -6,11 +6,11 @@ def solution(x):
     sumX=0
     k=x
     while(k/10!=0):
-        n=int(k%10)
-        k=int(k/10)
+        n=k%10
+        k=k//10
         sumX+=n
         print(sumX)
-    if int(x%sumX)!=0:
+    if (x%sumX)!=0:
         answer=False
     return answer
 

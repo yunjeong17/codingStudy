@@ -33,8 +33,6 @@ def solution2(n, works):
         if i+1==n:
             for j in max_heap:
                 answer+=j**2
-
-    
     return answer
 
 def solution3(n, works):
