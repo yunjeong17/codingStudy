@@ -9,12 +9,7 @@
 # 1번마을부터 출발
 def solution(N, road, K):
     answer = 0
-    for i in road:
-        if i[0]>i[1]:
-            tmp=i[0]
-            i[0]=i[1]
-            i[1]=tmp
-    
+
     print(road)
     return answer
 
