@@ -6,8 +6,6 @@ def solution(a, b):
     if(a<b):
         for i in range(a,b+1):
             answer+=i
-            print(a,b,i)
-            print("sfsdf",answer)
     elif(a>b):
         for i in range(b,a+1):
             answer+=i        
@@ -17,11 +15,22 @@ def solution(a, b):
 
     return answer
 
-# 짧게 다시 풀어보기
+# 부호를 선언해서 코드를 간결하게 해봤는데 복잡도 면에서는....
 def solution2(a, b):
-    answer =0
-    return answer
+    sign = -1 if a>b else 1
+    answer= [x for x in range(a,b+sign,sign) ]
+    return sum(answer)
 
-# print("1:",solution(3,5)) #12
-# print("2:",solution(3,3)) #3
-# print("3:",solution(5,3)) #12
+
+# 절댓값 이용 수학공식사용
+# 등차수열일떄  사용 가능
+# 합공식 : 1부터 n까지의 합은 n*(n+1)//2
+# a부터 b까지의 합은 (숫자의 개수 : abs(a-b)+1)*(끝수+첫수)//2
+
+# 엄청 오랜만에 보는 공식인듯.. 수학공부도 해야할거같다..
+def solution3(a, b):    
+    return (abs(a-b)+1) * (a+b) // 2
+
+print("1:",solution3(3,5)) #12
+print("2:",solution3(3,3)) #3
+print("3:",solution3(5,3)) #12
