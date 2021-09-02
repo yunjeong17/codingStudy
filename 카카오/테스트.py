@@ -53,6 +53,3 @@ print(solution2([[1, 1], [2, 2], [1, 2]]),"result: [2, 1]")
 # print(solution(),"result: ")
 
 lst=[[1,2,3],[4,5,6]]
-
-for i in lst[][1]:
-    print(i)

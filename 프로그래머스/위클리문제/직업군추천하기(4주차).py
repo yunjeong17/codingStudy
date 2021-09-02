@@ -2,9 +2,9 @@
 # 링크 : https://programmers.co.kr/learn/courses/30/lessons/84325
 import operator
 def solution(table, languages, preference):
-    dict={} #table을 정리한 딕셔너리 :: dict >> key=회사이름 value={key:회사이름 , value: 점수}
-    temp={} #
-    temp2={} # 호감도와 점수를 곱해서 값을 넣은 것
+    dict={} #table을 정리한 딕셔너리 :: dict >> key=회사이름 value={key:언어이름 , value: 점수}
+    temp={} # 선호언어 호감도와 점수를 곱해서 값을 넣은 것  :: temp >> >> key=회사이름 value={key:선호 언어 이름 , value: 호감도*점수} 
+    temp2={} #temp를 정리해서 회사별 점수 총합을 담은 딕셔너리
 
     for t in table:
         row=t.split(" ")
@@ -50,9 +50,6 @@ def solution2(table, languages, preference):
     
     for k,v in temp.items():
         temp2[k]=sum([v for v in temp[k].values()])
-    print('dict',dict)
-    print('temp',temp)   
-    print('temp2',temp2)
     return max(sorted(temp2.items()), key=operator.itemgetter(1))[0]
 
 print(solution2(["SI JAVA JAVASCRIPT SQL PYTHON C#", "CONTENTS JAVASCRIPT JAVA PYTHON SQL C++", "HARDWARE C C++ PYTHON JAVA JAVASCRIPT", "PORTAL JAVA JAVASCRIPT PYTHON KOTLIN PHP", "GAME C++ C# JAVASCRIPT C JAVA"],["PYTHON", "C++", "SQL"],[7, 5, 5]),"result: HARDWARE")
