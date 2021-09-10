@@ -1,35 +1,20 @@
-# 문제 : 순위검색
-# 링크 : https://programmers.co.kr/learn/courses/30/lessons/72412
+# # 문제 : 순위검색
+# # 링크 : https://programmers.co.kr/learn/courses/30/lessons/72412
 
-# 언어	    직군	    경력	    소울 푸드	 점수
-# java  	backend	    junior	    pizza	    150
-# python	frontend	senior	    chicken	    210
-# python	frontend	senior  	chicken	    150
-# cpp	    backend	    senior  	pizza	    260
-# java  	backend	    junior  	chicken 	80
-# python	backend 	senior  	chicken	    50
-
-
-#이진검색 
-def binarySearch(arr, target):
-    print(arr)
-    left=0
-    right=len(arr)-1
-    if arr[left]>target:
-        return len(arr)
-    if arr[right]<target:
-        return 0
-    while left < right:
-        mid=(left+right)//2
-        if arr[mid]<target:
-            left=mid+1
-        if arr[mid]>=target:
-            right=mid
-    return len(arr)-left
+# # 언어	    직군	    경력	    소울 푸드	 점수
+# # java  	backend	    junior	    pizza	    150
+# # python	frontend	senior	    chicken	    210
+# # python	frontend	senior  	chicken	    150
+# # cpp	    backend	    senior  	pizza	    260
+# # java  	backend	    junior  	chicken 	80
+# # python	backend 	senior  	chicken	    50
 
 
 
-# 정확성은 100점인데..ㅠㅠ 효율성 0점이네...
+
+
+
+# # 정확성은 100점인데..ㅠㅠ 효율성 0점이네...
 # import re
 # from collections import Counter
 # def solution(info, query):
@@ -71,7 +56,7 @@ def binarySearch(arr, target):
 
 # print(solution(["java backend junior pizza 150","python frontend senior chicken 210","python frontend senior chicken 150","cpp backend senior pizza 260","java backend junior chicken 80","python backend senior chicken 50"],["java and backend and junior and pizza 100","python and frontend and senior and chicken 200","cpp and - and senior and pizza 250","- and backend and senior and - 150","- and - and - and chicken 100","- and - and - and - 150"]),"result:[1,1,1,1,2,4]")
 
-# #딕셔너리 안쓰고 했는데 효율성 딱히 뭐.,......... 엄청나게 바뀌진않네....
+# # #딕셔너리 안쓰고 했는데 효율성 딱히 뭐.,......... 엄청나게 바뀌진않네....
 # def solution2(info, query):
 #     answer = []
 #     infoList=[]
@@ -116,10 +101,10 @@ def binarySearch(arr, target):
 #         answer.append(cnt)
 
 #     return answer
-# print(solution2(["java backend junior pizza 150","python frontend senior chicken 210","python frontend senior chicken 150","cpp backend senior pizza 260","java backend junior chicken 80","python backend senior chicken 50"],["java and backend and junior and pizza 100","python and frontend and senior and chicken 200","cpp and - and senior and pizza 250","- and backend and senior and - 150","- and - and - and chicken 100","- and - and - and - 150"]),"result:[1,1,1,1,2,4]")
+# # print(solution2(["java backend junior pizza 150","python frontend senior chicken 210","python frontend senior chicken 150","cpp backend senior pizza 260","java backend junior chicken 80","python backend senior chicken 50"],["java and backend and junior and pizza 100","python and frontend and senior and chicken 200","cpp and - and senior and pizza 250","- and backend and senior and - 150","- and - and - and chicken 100","- and - and - and - 150"]),"result:[1,1,1,1,2,4]")
 
 
-# # 앞에 데이터 정리하는 부분에서 오래걸리는듯 싶음.... 
+# # # 앞에 데이터 정리하는 부분에서 오래걸리는듯 싶음.... 
 # from collections import Counter
 # def solution4(info, query):
 #     answer = []
@@ -151,6 +136,24 @@ def binarySearch(arr, target):
 #         print(answer)
 #         infoScoreList.clear()
 #     return answer
+
+
+# #이진검색 
+def binarySearch(arr, target):
+    print(arr)
+    left=0
+    right=len(arr)-1
+    if arr[left]>target:
+        return len(arr)
+    if arr[right]<target:
+        return 0
+    while left < right:
+        mid=(left+right)//2
+        if arr[mid]<target:
+            left=mid+1
+        if arr[mid]>=target:
+            right=mid
+    return len(arr)-left
 
 # print(solution4(["java backend junior pizza 150","python frontend senior chicken 210","python frontend senior chicken 150","cpp backend senior pizza 260","java backend junior chicken 80","python backend senior chicken 50"],["java and backend and junior and pizza 100","python and frontend and senior and chicken 200","cpp and - and senior and pizza 250","- and backend and senior and - 150","- and - and - and chicken 100","- and - and - and - 150"]),"result:[1,1,1,1,2,4]")
 
@@ -198,7 +201,6 @@ def binarySearch(arr, target):
 
 
 #sort가 안에서 돌아가고있어서 오래걸렸던거였네..
-from bisect import bisect_left
 from itertools import combinations
 def solution6(info, query):
     answer = []
@@ -215,7 +217,7 @@ def solution6(info, query):
                     infoDict[tmp].append(infoValue)
                 else:
                     infoDict[tmp]=[infoValue]
-    
+    print(infoDict)
     #이게 문제였음
     for i in infoDict.keys():
         infoDict[i].sort()
