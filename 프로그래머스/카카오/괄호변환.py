@@ -14,6 +14,8 @@
 #    4-5. 생성된 문자열을 반환합니다.
 
 # https://medium.com/@dltkddud4403/2020-%EC%B9%B4%EC%B9%B4%EC%98%A4-%EB%B8%94%EB%9D%BC%EC%9D%B8%EB%93%9C-%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-%EA%B4%84%ED%98%B8-37ad7be7acd6
+
+
 def solution(p):
 	answer = ''
 	u=""

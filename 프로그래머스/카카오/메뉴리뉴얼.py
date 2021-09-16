@@ -25,7 +25,7 @@ def solution(orders, course):
     
     for tempDict in tempOrder:
         answer+=[k for k,v in tempDict.items() if max(tempDict.values()) == v and v>1 ]
-
+    
     answer.sort()
     return answer
 
