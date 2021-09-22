@@ -72,7 +72,7 @@ def solution2(name):
     
     minMove=len(name)-1 # 최대로 많이 움직일때 (왼쪽부터 오른쪽끝까지 갔을때)를 저장
     for i,n in enumerate(name):
-        if i!='A':#위아래 변경부터 계산 전부하기
+        if i!='A': #위아래 변경부터 계산 전부하기
             answer += (len(alphabet)-alphabet.index(n)) if alphabet.index(n)>len(alphabet)//2 else alphabet.index(n)
 
             #양옆 변경 계산
@@ -86,10 +86,7 @@ def solution2(name):
         #위의 걸 수행한거중 가장 작은걸 저장해둠
     answer += minMove
     print(answer)
-
-
     return answer
-
 
 print(solution2("JEROEN"),'result: 	56')
 print(solution2("JAN"),'result: 	23')

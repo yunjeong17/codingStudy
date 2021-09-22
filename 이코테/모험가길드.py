@@ -5,6 +5,7 @@
 # 여행을 떠날 수 있는 "그룹 수의 최댓값"
 # 몇명의 모험가는 마을에 남아있어도 됨
 def solution():
+    n=input()
     lst=list(map(int, input().split(' ')))
     lst.sort()
     print(lst)

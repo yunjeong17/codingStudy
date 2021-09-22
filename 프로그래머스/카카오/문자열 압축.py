@@ -17,8 +17,7 @@ def solution(s):
             cnt=1
         else:
             cnt+=1
-            answer[len(answer)-1][1]+=1
-
+            answer[len(answer)-1][1]+=1        
     for i in answer[1:]:
         if i[1]==1:
             result+=i[0]
@@ -71,16 +70,18 @@ def solution2(s):
                 result+=str(i[1])+i[0]
             print(j,result)
         rset.append(len(result))
+        print(answer)
         answer=[]
         result=""
         k=0
         cnt=1
         print("======================================")
+        print(rset)
     return min(rset)
     
-# print(solution2("aabbaccc"),"result: 7")
+print(solution2("aabbaccc"),"result: 7")
 # print(solution2("ababcdcdababcdcd"),"result: 9")
 # print(solution2("abcabcdede"),"result: 8")
 # print(solution2("abcabcabcabcdededededede"),"result: 14")
 # print(solution2("xababcdcdababcdcd"),"result: 17")
-print(solution2("x"),"result: 1")
+# print(solution2("x"),"result: 1")

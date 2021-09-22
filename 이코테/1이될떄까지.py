@@ -20,7 +20,7 @@ def solution():
         cnt+=1
     print(cnt)
 
-#영상 풀이
+#책 풀이
 def solution2():
     n,k=map(int,input().split())
     result=0
