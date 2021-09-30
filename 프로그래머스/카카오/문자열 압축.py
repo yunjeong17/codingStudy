@@ -9,7 +9,6 @@ def solution(s):
     k=0
     cnt=1
     answer.append(["",0])
-
     for i in range(len(s)):
         if(s[i]!=answer[k][0]):
             answer.append([s[i],1])
@@ -23,7 +22,6 @@ def solution(s):
             result+=i[0]
         else:
             result+=str(i[1])+i[0]
-
     return len(result)
 
 
@@ -43,6 +41,7 @@ def solution(s):
 #  0:1            0+1:0+2*1 >> 1:2
 #j=1 i=1
 #  1:2            1+1:1+2*1 >> 2:3
+
 def solution2(s):
     answer = []
     rset=[]
@@ -78,7 +77,6 @@ def solution2(s):
         print("======================================")
         print(rset)
     return min(rset)
-    
 print(solution2("aabbaccc"),"result: 7")
 # print(solution2("ababcdcdababcdcd"),"result: 9")
 # print(solution2("abcabcdede"),"result: 8")

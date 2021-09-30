@@ -19,11 +19,11 @@ def solution(genres, plays):
             dic[g]=[[i,p]]
             totalPlays[g]=p
 
-    totalPlaysList=list(sorted(totalPlays.items(), key=lambda x: -x[1]))
-    print(totalPlaysList)
+    totalPlaysTuple=sorted(totalPlays.items(), key=lambda x: -x[1])
+    print(totalPlaysTuple)
     # 속한 노래가 많이 재생된 장르를 먼저 수록합니다.
     order1=[]
-    for i in totalPlaysList:
+    for i in totalPlaysTuple:
         order1.append(i[0])
 
     # 장르 내에서 많이 재생된 노래를 먼저 수록합니다.
@@ -36,7 +36,7 @@ def solution(genres, plays):
         else:
             answer.append(temp[0][0])
 
-    print(dic,totalPlaysList,order1,answer)
+    print(dic,totalPlaysTuple,order1,answer)
     return answer
 
 print(solution(["classic", "pop", "classic", "classic", "pop"],[500, 600, 150, 800, 2500]),"result:[4, 1, 3, 0]")

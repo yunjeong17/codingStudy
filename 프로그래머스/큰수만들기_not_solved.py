@@ -33,8 +33,8 @@ def solution1(number, k):
         answer+=str(i)
     return answer
 
-print(solution("1924",2),"result: 94")
-print(solution("1231234",3),"result: 3234")
+print(solution1("1924",2),"result: 94")
+print(solution1("1231234",3),"result: 3234")
 
 # '41'77252841 >> 77'2'52841 >> 775'2'841 >> 775841
-print(solution("4177252841",4),"result:775841")
+print(solution1("4177252841",4),"result:775841")
