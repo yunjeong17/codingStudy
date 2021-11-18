@@ -26,8 +26,8 @@ def solution(enter, leave):
     
     return answer
 
-print(solution([1,3,2],[1,2,3]),'result: [0,1,1]')
+# print(solution([1,3,2],[1,2,3]),'result: [0,1,1]')
 print(solution([1,4,2,3],[2,1,3,4]),'result: [2,2,1,3]')
-print(solution([3,2,1],[2,1,3]),'result: 	[1,1,2]')
-print(solution([3,2,1],[1,3,2]),'result: [2,2,2]')
-print(solution([1,4,2,3],[2,1,4,3]),'result:[2,2,0,2] ')
+# print(solution([3,2,1],[2,1,3]),'result: 	[1,1,2]')
+# print(solution([3,2,1],[1,3,2]),'result: [2,2,2]')
+# print(solution([1,4,2,3],[2,1,4,3]),'result:[2,2,0,2] ')

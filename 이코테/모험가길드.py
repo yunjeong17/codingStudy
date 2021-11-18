@@ -9,6 +9,15 @@ def solution():
     lst=list(map(int, input().split(' ')))
     lst.sort()
     print(lst)
-    return 0
+    group=0
+    count=0
+    for i in lst:
+        count+=1
+        if count>=i:
+            group+=1
+            count=0
+    return group
 
+# 5
+# 2 3 1 2 2
 print(solution())

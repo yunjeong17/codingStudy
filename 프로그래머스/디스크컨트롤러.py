@@ -43,7 +43,8 @@
 # 새로운걸 알게됨
 # 접근법은 완전 비슷했다!!! 나중에 다시 풀면 안보고 풀수있을거같음
 
-import heapq 
+import heapq
+
 def solution(jobs):
     answer = 0 
     end, i = 0, 0  #end는 스케쥴 끝난 시점,i는 몇개의 스케쥴이 끝났는지 세는 수
@@ -53,6 +54,7 @@ def solution(jobs):
         for job in jobs: # job[0]:요청시점 / job[1]:작업하는데 걸리는 시간 
             if start<job[0]<=end: #시작시간과 끝나는 시간 사이에 스케쥴이 있으면 >> 이렇게하면 굳이나 jobs에서 remove를 할 필요가 없구나.
                 heapq.heappush(hq, (job[1], job[0]))  #heap에 푸시해준다.
+
         if hq: # hq에 뭔가 들어있으면
             now = heapq.heappop(hq) #heap에서 꺼내서 작업을 수행(제일 작은걸 뽑아줌)
             start = end #하나의 작업이 끝났으니 시작시간은 끝나는시간
@@ -70,4 +72,4 @@ def solution(jobs):
 # print(solution([[0, 3], [1, 9], [2, 6]]),'reesult: 9')
 # print(solution([[0, 5], [6, 2], [6, 1]] ),'reesult: 3')
 # print(solution([[0, 5], [2, 2], [5, 3]]),'reesult: 5')
-print(solution([[0, 10], [4, 10], [15, 2], [5, 11]] ),'reesult:   15')
+# print(solution([[0, 10], [4, 10], [15, 2], [5, 11]] ),'reesult:   15')
